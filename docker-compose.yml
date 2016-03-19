@@ -6,3 +6,12 @@ identidock:
     ENV: DEV
   volumes:
     - ./app:/app
+  links:
+    - dnmonster
+  container_name: identidock
+
+dnmonster:
+  ports:
+    - "8080:8080"
+  image: amouat/dnmonster:1.0
+  container_name: dnmonster 
