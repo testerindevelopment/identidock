@@ -8,6 +8,7 @@ identidock:
     - ./app:/app
   links:
     - dnmonster
+    - redis
   container_name: identidock
 
 dnmonster:
@@ -15,3 +16,6 @@ dnmonster:
     - "8080:8080"
   image: amouat/dnmonster:1.0
   container_name: dnmonster 
+
+redis:
+  image: redis:3.0
