@@ -6,3 +6,5 @@ docker run -d -p 5000:5000 -e "ENV=DEV" --link dnmonster:dnmonster --link redis:
 # Using docker-compose
 docker-compose build
 docker-compose run
+docker-compose -f docker-compose-dev.yml up
+docker-compose -f docker-compose-prod.yml up
