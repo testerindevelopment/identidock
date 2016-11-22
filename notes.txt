@@ -11,3 +11,4 @@ docker-compose -f docker-compose-prod.yml up
 
 # run tests against app
 docker run identidock python tests.py
+docker run -e "ENV=UNIT" identidock
